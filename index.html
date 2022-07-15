@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>utils</title>
+  </head>
+  <body>
+    <script type="module">
+      import * as is from './utils/is.js';
+      console.log('inBrowser', is.inBrowser);
+      console.log('isEdge', is.isEdge);
+      console.log('isChrome', is.isChrome);
+    </script>
+
+    <script type="module">
+      import * as base from './utils/base.js';
+      console.log('randomInt', base.randomInt(1, 10));
+    </script>
+  </body>
+</html>
