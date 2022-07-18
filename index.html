@@ -9,9 +9,11 @@
   <body>
     <script type="module">
       import * as is from './utils/is.js';
+      console.log(is);
       console.log('inBrowser', is.inBrowser);
       console.log('isEdge', is.isEdge);
       console.log('isChrome', is.isChrome);
+      console.log(is.isArray([]));
     </script>
     <script type="module">
       import * as base from './utils/base.js';
