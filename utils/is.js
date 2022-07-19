@@ -30,6 +30,14 @@ export const isDate = date => {
   return Object.prototype.toString.call(date) === '[object Date]';
 };
 
+export const isRegExp = value => {
+  return Object.prototype.toString.call(value) === '[object RegExp]';
+};
+
 export const isArray = arr => {
   return arr && Array.isArray(arr);
+};
+
+export const isFunction = fn => {
+  return typeof fn === 'function';
 };
