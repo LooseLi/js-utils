@@ -7,6 +7,7 @@
     <title>utils</title>
   </head>
   <body>
+    <h1>Hello</h1>
     <script type="module">
       import * as is from './utils/is.js';
       console.log(is);
@@ -21,6 +22,10 @@
       import * as base from './utils/base.js';
       console.log('randomInt', base.randomInt(1, 10));
       console.log('arrayRepeat', base.arrayRepeat([1, 1, 2, 3, 4, 5, 6, 6, 7, 6]));
+    </script>
+    <script type="module">
+      import * as dom from './utils/dom.js';
+      console.log(dom.getElement('h1'));
     </script>
   </body>
 </html>
