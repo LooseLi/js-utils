@@ -27,7 +27,9 @@
       import * as dom from './utils/dom.js';
       const el = dom.getElement('h1');
       dom.addClass(el, 'h-');
+      dom.removeClass(el, 'h');
       // console.log('hasClass', dom.hasClass(el, 'demo'));
+      dom.getBoundingClientRect(el);
     </script>
   </body>
 </html>
