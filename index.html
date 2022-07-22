@@ -7,7 +7,7 @@
     <title>utils</title>
   </head>
   <body>
-    <h1>Hello</h1>
+    <h1 class="h">Hello</h1>
     <script type="module">
       import * as is from './utils/is.js';
       console.log(is);
@@ -25,7 +25,9 @@
     </script>
     <script type="module">
       import * as dom from './utils/dom.js';
-      console.log(dom.getElement('h1'));
+      const el = dom.getElement('h1');
+      dom.addClass(el, 'h-');
+      // console.log('hasClass', dom.hasClass(el, 'demo'));
     </script>
   </body>
 </html>
