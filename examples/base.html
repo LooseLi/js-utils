@@ -7,11 +7,13 @@
     <title>utils-base</title>
   </head>
   <body>
-    <h1 class="h">Hello base</h1>
+    <div id="randomInt"></div>
+    <div id="arrayRepeat"></div>
     <script type="module">
+      import * as dom from '../utils/dom.js';
       import * as base from '../utils/base.js';
-      console.log('randomInt', base.randomInt(1, 10));
-      console.log('arrayRepeat', base.arrayRepeat([1, 1, 2, 3, 4, 5, 6, 6, 7, 6]));
+      dom.getElement('#randomInt').innerHTML = 'randomInt：' + base.randomInt(1, 10);
+      console.log('arrayRepeat：', base.arrayRepeat([1, 1, 2, 3, 4, 5, 6, 6, 7, 6]));
     </script>
   </body>
 </html>
