@@ -5,18 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>utils-is</title>
+    <style type="text/css">
+      ul > li {
+        margin: 10px 0;
+      }
+    </style>
   </head>
   <body>
-    <h1 class="h">Hello is</h1>
+    <ul>
+      <li id="inBrowser"></li>
+      <li id="isEdge"></li>
+      <li id="isChrome"></li>
+      <li id="isAndroid"></li>
+      <li id="isIOS"></li>
+    </ul>
     <script type="module">
+      import * as dom from '../utils/dom.js';
       import * as is from '../utils/is.js';
-      console.log(is);
-      console.log('inBrowser', is.inBrowser);
-      console.log('isEdge', is.isEdge);
-      console.log('isChrome', is.isChrome);
-      console.log(is.isArray([]));
-      function test() {}
-      console.log('isFunction', is.isFunction(test));
+
+      dom.getElement('#inBrowser').innerHTML = 'inBrowser：' + is.inBrowser;
+      dom.getElement('#isEdge').innerHTML = 'isEdge：' + is.isEdge;
+      dom.getElement('#isChrome').innerHTML = 'isChrome：' + is.isChrome;
+      dom.getElement('#isAndroid').innerHTML = 'isAndroid：' + is.isAndroid;
+      dom.getElement('#isIOS').innerHTML = 'isIOS：' + is.isIOS;
+
+      console.log('isString', is.isString(''));
+      console.log('isNumber', is.isNumber(''));
+      console.log('isBoolean', is.isBoolean(''));
+      console.log('isObject', is.isObject(''));
+      console.log('isDate', is.isDate(''));
+      console.log('isRegExp', is.isRegExp(''));
+      console.log('isArray', is.isArray([]));
+      console.log(
+        'isFunction',
+        is.isFunction(function test() {})
+      );
     </script>
   </body>
 </html>
