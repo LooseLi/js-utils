@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>utils-is</title>
+  </head>
+  <body>
+    <h1 class="h">Hello is</h1>
+    <script type="module">
+      import * as is from '../utils/is.js';
+      console.log(is);
+      console.log('inBrowser', is.inBrowser);
+      console.log('isEdge', is.isEdge);
+      console.log('isChrome', is.isChrome);
+      console.log(is.isArray([]));
+      function test() {}
+      console.log('isFunction', is.isFunction(test));
+    </script>
+  </body>
+</html>
