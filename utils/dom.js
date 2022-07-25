@@ -31,5 +31,5 @@ export function removeClass(el, cls) {
 
 export function getBoundingClientRect(el) {
   if (!el || !el.getBoundingClientRect) return;
-  console.log(el.getBoundingClientRect());
+  return el.getBoundingClientRect();
 }
