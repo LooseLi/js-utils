@@ -29,6 +29,7 @@ export function removeClass(el, cls) {
   }
 }
 
+// 元素的大小及其相对于视口的位置
 export function getBoundingClientRect(el) {
   if (!el || !el.getBoundingClientRect) return;
   return el.getBoundingClientRect();
