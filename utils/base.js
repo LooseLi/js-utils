@@ -44,3 +44,13 @@ export function formatDate(time, str) {
     return obj[$1];
   });
 }
+
+/**
+ * 数字千分位分隔符
+ * @param {*} num 数字
+ * 23456000 --> 23,456,000
+ */
+export function formatNum(num) {
+  if (!isNumber(num)) return;
+  return parseInt(num).toLocaleString();
+}
