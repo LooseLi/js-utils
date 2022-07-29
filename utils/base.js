@@ -54,3 +54,20 @@ export function formatNum(num) {
   if (!isNumber(num)) return;
   return parseInt(num).toLocaleString();
 }
+
+/**
+ * 截取字符串并加省略号
+ * @param {*} str
+ * @param {*} length
+ * @returns
+ */
+export function subText(str, length) {
+  if (str.length === 0) {
+    return '';
+  }
+  if (str.length > length) {
+    return str.substr(0, length) + '...';
+  } else {
+    return str;
+  }
+}
