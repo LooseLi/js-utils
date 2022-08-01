@@ -45,3 +45,6 @@ export const isFunction = fn => {
 export const isTelephone = tel => {
   return /^1[3,4,5,6,7,8,9][0-9]{9}$/.test(tel.toString());
 };
+
+// 验证数字和字符串组成
+export const isNumberAndStr = value => /^[A-Za-z0-9]+$/g.test(value);
