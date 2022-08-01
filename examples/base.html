@@ -9,6 +9,7 @@
   <body>
     <div id="randomInt"></div>
     <div id="arrayRepeat"></div>
+    <div id="currentURL"></div>
     <script type="module">
       import * as dom from '../utils/dom.js';
       import * as base from '../utils/base.js';
@@ -17,6 +18,7 @@
       console.log(base.formatDate('2022/07/15', 'yyyy-MM-dd HH:mm:ss'));
       console.log(base.formatNum(135847843));
       console.log(base.subText('123456789', 6));
+      dom.getElement('#currentURL').innerHTML = 'currentURL：' + base.currentURL();
     </script>
   </body>
 </html>

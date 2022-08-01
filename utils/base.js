@@ -71,3 +71,6 @@ export function subText(str, length) {
     return str;
   }
 }
+
+// 返回当前url
+export const currentURL = () => window.location.href;
