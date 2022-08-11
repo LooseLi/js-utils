@@ -19,6 +19,8 @@
       console.log(base.formatNum(135847843));
       console.log(base.subText('123456789', 6));
       dom.getElement('#currentURL').innerHTML = 'currentURL：' + base.currentURL();
+      base.localStorageSet('base', 'test');
+      console.log(base.localStorageGet('base'));
     </script>
   </body>
 </html>
