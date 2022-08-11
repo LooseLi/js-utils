@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>utils-browser</title>
+  </head>
+  <body>
+    <div id="currentURL"></div>
+    <script type="module">
+      import * as dom from '../utils/dom.js';
+      import * as browser from '../utils/browser.js';
+      dom.getElement('#currentURL').innerHTML = 'currentURL：' + browser.currentURL();
+      browser.localStorageSet('browser', 'test');
+      console.log(browser.localStorageGet('browser'));
+      browser.localStorageRemove('browser');
+    </script>
+  </body>
+</html>
