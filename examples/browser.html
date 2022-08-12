@@ -15,6 +15,14 @@
       browser.localStorageSet('browser', 'test');
       console.log(browser.localStorageGet('browser'));
       browser.localStorageRemove('browser');
+
+      browser.sessionStorageSet('browser', 'test');
+      console.log(browser.sessionStorageGet('browser'));
+      browser.sessionStorageRemove('browser');
+
+      browser.cookieSet('browser', 'test');
+      console.log(browser.cookieGet('browser'));
+      browser.cookieRemove('browser');
     </script>
   </body>
 </html>
