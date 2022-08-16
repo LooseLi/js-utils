@@ -56,6 +56,17 @@ export const formatNum = num => {
 };
 
 /**
+ * 手机号中间四位变成*
+ * @param {*} tel
+ * @returns
+ * 19122223456 --> 191****3456
+ */
+export const formatTel = tel => {
+  tel = String(tel);
+  return tel.substr(0, 3) + '****' + tel.substr(7);
+};
+
+/**
  * 截取字符串并加省略号
  * @param {*} str
  * @param {*} length
