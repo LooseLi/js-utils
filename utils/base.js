@@ -1,22 +1,22 @@
 import {isDate, isNumber, isString} from './is.js';
 
 // 范围内随机取整
-export function randomInt(min, max) {
+export const randomInt = (min, max) => {
   const c = max - min + 1;
   return Math.floor(Math.random() * c + min);
-}
+};
 
 // 简单数组去重
-export function arrayRepeat(arr) {
+export const arrayRepeat = arr => {
   return [...new Set(arr)];
-}
+};
 
 /**
  * @param {*} time 时间戳|日期|字符串
  * @param {*} str yyyy-MM-dd --> 2022-07-25
  * @returns
  */
-export function formatDate(time, str) {
+export const formatDate = (time, str) => {
   let t = time;
   if (!isDate(time)) {
     if (isNumber(time) || isString(time)) {
@@ -43,17 +43,17 @@ export function formatDate(time, str) {
   return str.replace(/([a-z]+)/gi, function ($1) {
     return obj[$1];
   });
-}
+};
 
 /**
  * 数字千分位分隔符
  * @param {*} num 数字
  * 23456000 --> 23,456,000
  */
-export function formatNum(num) {
+export const formatNum = num => {
   if (!isNumber(num)) return;
   return parseInt(num).toLocaleString();
-}
+};
 
 /**
  * 截取字符串并加省略号
@@ -61,7 +61,7 @@ export function formatNum(num) {
  * @param {*} length
  * @returns
  */
-export function subText(str, length) {
+export const subText = (str, length) => {
   if (str.length === 0) {
     return '';
   }
@@ -70,7 +70,7 @@ export function subText(str, length) {
   } else {
     return str;
   }
-}
+};
 
 /**
  * base64ToFile
